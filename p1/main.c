@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main(void){
-    int N;
-    bool is_rs=false;
+    int N, rs=0;//기본이 0
     
     scanf("%d", &N);
     
@@ -13,7 +12,7 @@ int main(void){
                 if(gkq == N){
                     if(k<i || k <j){
                         printf("%d %d %d\n", i, j, k);
-                        is_rs=true;
+                        rs=1;
                     }
                     break;
                 if(gkq>N){
@@ -26,7 +25,7 @@ int main(void){
         }
     
     }
-    if(is_rs=false){
+    if(rs==0){
             printf("none");
         }
     return 0;
